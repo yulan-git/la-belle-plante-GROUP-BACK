@@ -4,6 +4,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "build": "build",
     "api": "json-server db/data.json",
     "heroku-postbuild": "build --configuration production"
   },

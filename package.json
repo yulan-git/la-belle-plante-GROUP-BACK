@@ -3,13 +3,9 @@
     "json-server": "^0.17.0"
   },
   "scripts": {
-    "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test --configuration=ci",
     "api": "json-server db/data.json",
-    "heroku-postbuild": "ng build --configuration production"
+    "heroku-postbuild": "build --configuration production"
   },
   "engines": {
     "node": "16.13.1",

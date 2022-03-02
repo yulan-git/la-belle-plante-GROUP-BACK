@@ -1,7 +1,7 @@
 name: CI-CD
 on: 
   push:
-    branches: [ develop ]
+    branches: [ master ]
 
   workflow_dispatch:
 
@@ -22,11 +22,11 @@ jobs:
     - name: Install dependencies
       run: npm install
     
-    - name: lint
-      run: npm run lint
+    # - name: lint
+    #   run: npm run lint
     
-    - name: Unit tests
-      run: npm run test
+    # - name: Unit tests
+    #   run: npm run test
     
   build: 
     needs: test
@@ -68,6 +68,6 @@ jobs:
     
     - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
-        heroku_api_key: ${{ secrets.LA_BELLE_PLANTE }}
-        heroku_app_name: "labelleplante"
+        heroku_api_key: ${{ secrets.LA_BELLE_PLANTE_BACK }}
+        heroku_app_name: "labelleplanteback"
         heroku_email: "gaellecoue@gmail.com"
